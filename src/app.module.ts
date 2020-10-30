@@ -1,8 +1,14 @@
 import { Module } from '@nestjs/common';
+import { StreamModule } from './stream/stream.module';
+import { PatchController } from './controllers/patch.controller';
 
 @Module({
-  imports: [],
-  controllers: [],
-  providers: [],
+  imports: [
+    StreamModule,
+  ],
+  controllers: [
+    PatchController,
+  ],
 })
-export class AppModule {}
+export class AppModule {
+}
